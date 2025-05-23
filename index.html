@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>James Portfolio</title>
   <style>
     body {
@@ -14,6 +15,7 @@
       flex-direction: column;
       overflow: auto;
       text-align: center;
+      margin: 0;
     }
 
     .profile-img {
@@ -25,9 +27,14 @@
       animation: rotate 10s linear infinite;
     }
 
-    h1, h2 {
-      margin: 10px;
-      animation: rotate-text 6s linear infinite;
+    .typing-text {
+      font-size: 3em;
+      font-weight: bold;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid #fff;
+      width: 0;
+      animation: typing 3.5s steps(25, end) forwards, blink 0.75s step-end infinite;
       background: linear-gradient(270deg, #ff416c, #ff4b2b, #00c9ff, #92fe9d);
       background-size: 800% 800%;
       -webkit-background-clip: text;
@@ -35,8 +42,16 @@
       cursor: pointer;
     }
 
-    h1 { font-size: 3em; animation-duration: 5s; }
-    h2 { font-size: 1.8em; animation-duration: 8s; }
+    h2 {
+      font-size: 1.8em;
+      margin: 10px;
+      animation: rotate-text 8s linear infinite;
+      background: linear-gradient(270deg, #ff416c, #ff4b2b, #00c9ff, #92fe9d);
+      background-size: 800% 800%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      cursor: pointer;
+    }
 
     .projects {
       display: flex;
@@ -88,11 +103,21 @@
       0% { filter: hue-rotate(0deg); }
       100% { filter: hue-rotate(360deg); }
     }
+
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 20ch }
+    }
+
+    @keyframes blink {
+      from, to { border-color: transparent }
+      50% { border-color: white }
+    }
   </style>
 </head>
 <body>
-  <img src="https://files.catbox.moe/xa9kzj.jpg" alt="Profile Image" class="profile-img" onclick="speak('James profile image')">
-  <h1 onclick="speak('James')">James</h1>
+  <img src="https://files.catbox.moe/xa9kzj.jpg" alt="James profile picture" class="profile-img" onclick="speak('James profile image')">
+  <h1 class="typing-text" onclick="speak('James Tech Support')"></h1>
   <h2 onclick="speak('JamesTech Portfolio')">JamesTech Portfolio</h2>
 
   <div class="projects">
@@ -114,6 +139,11 @@
       msg.lang = 'en-US';
       window.speechSynthesis.speak(msg);
     }
+
+    // Typing effect text
+    const text = "James Tech Support";
+    const typingElement = document.querySelector(".typing-text");
+    typingElement.textContent = text;
   </script>
 </body>
 </html>
