@@ -4,21 +4,16 @@
   <meta charset="UTF-8">
   <title>James Portfolio</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       height: 100vh;
-      background: url('https://files.catbox.moe/yg9v6p.jpg') no-repeat center center/cover;
+      background: url('https://files.catbox.moe/xa9kzj.jpg') no-repeat center center/cover;
       display: flex;
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      overflow: hidden;
+      overflow: auto;
+      text-align: center;
     }
 
     .profile-img {
@@ -26,27 +21,56 @@
       height: 150px;
       border-radius: 50%;
       border: 5px solid white;
-      margin-bottom: 20px;
+      margin-top: 20px;
       animation: rotate 10s linear infinite;
     }
 
     h1, h2 {
-      text-align: center;
+      margin: 10px;
       animation: rotate-text 6s linear infinite;
       background: linear-gradient(270deg, #ff416c, #ff4b2b, #00c9ff, #92fe9d);
       background-size: 800% 800%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      cursor: pointer;
     }
 
-    h1 {
-      font-size: 3em;
-      animation: rotate-text 5s linear infinite;
+    h1 { font-size: 3em; animation-duration: 5s; }
+    h2 { font-size: 1.8em; animation-duration: 8s; }
+
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 15px;
+      margin-top: 30px;
     }
 
-    h2 {
-      font-size: 1.8em;
-      animation: rotate-text 8s linear infinite reverse;
+    .project-btn {
+      padding: 15px 25px;
+      border: none;
+      border-radius: 12px;
+      font-size: 1.1em;
+      cursor: pointer;
+      background: linear-gradient(90deg, #ff8a00, #e52e71, #9b00ff);
+      color: white;
+      animation: colorShift 4s infinite;
+      transition: transform 0.3s;
+    }
+
+    .project-btn:hover {
+      transform: scale(1.1);
+    }
+
+    .whatsapp-btn {
+      margin-top: 30px;
+      padding: 12px 20px;
+      background: #25D366;
+      color: white;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
     }
 
     @keyframes rotate {
@@ -59,11 +83,37 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+
+    @keyframes colorShift {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
+    }
   </style>
 </head>
 <body>
-  <img src="https://files.catbox.moe/yg9v6p.jpg" alt="Profile Image" class="profile-img">
-  <h1>James</h1>
-  <h2>JamesTech Portfolio</h2>
+  <img src="https://files.catbox.moe/xa9kzj.jpg" alt="Profile Image" class="profile-img" onclick="speak('James profile image')">
+  <h1 onclick="speak('James')">James</h1>
+  <h2 onclick="speak('JamesTech Portfolio')">JamesTech Portfolio</h2>
+
+  <div class="projects">
+    <button class="project-btn" onclick="speak('Project One')">Project One</button>
+    <button class="project-btn" onclick="speak('Project Two')">Project Two</button>
+    <button class="project-btn" onclick="speak('Project Three')">Project Three</button>
+    <button class="project-btn" onclick="speak('Project Four')">Project Four</button>
+    <button class="project-btn" onclick="speak('Project Five')">Project Five</button>
+    <button class="project-btn" onclick="speak('Project Six')">Project Six</button>
+  </div>
+
+  <button class="whatsapp-btn" onclick="window.open('https://whatsapp.com/channel/your_channel_id', '_blank'); speak('Join WhatsApp Channel')">
+    Join WhatsApp Channel
+  </button>
+
+  <script>
+    function speak(text) {
+      const msg = new SpeechSynthesisUtterance(text);
+      msg.lang = 'en-US';
+      window.speechSynthesis.speak(msg);
+    }
+  </script>
 </body>
 </html>
