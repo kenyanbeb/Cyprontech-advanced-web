@@ -5,17 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>James Portfolio</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      height: 100vh;
-      background: url('https://files.catbox.moe/xa9kzj.jpg') no-repeat center center/cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      overflow: auto;
-      text-align: center;
+    * {
+      box-sizing: border-box;
       margin: 0;
+      padding: 0;
+    }
+
+    body, html {
+      height: 100%;
+      overflow: auto;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+    }
+
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    canvas {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      z-index: -1;
+      width: 100vw;
+      height: 200px;
+      pointer-events: none;
     }
 
     .profile-img {
@@ -75,7 +95,7 @@
       transform: scale(1.1);
     }
 
-    .whatsapp-btn, .control-btn {
+    .whatsapp-btn {
       margin-top: 20px;
       padding: 12px 20px;
       font-size: 1.1em;
@@ -83,15 +103,20 @@
       border-radius: 8px;
       cursor: pointer;
       color: white;
-    }
-
-    .whatsapp-btn {
       background: #25D366;
     }
 
     .control-btn {
-      background: #444;
-      margin: 5px;
+      margin-top: 20px;
+      padding: 12px 20px;
+      font-size: 1.1em;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(270deg, #ff416c, #ff4b2b, #00c9ff, #92fe9d);
+      background-size: 300% 300%;
+      animation: colorShiftFast 2s linear infinite;
     }
 
     .volume-slider {
@@ -109,16 +134,6 @@
 
     .volume-slider::-webkit-slider-thumb {
       -webkit-appearance: none;
-      height: 30px;
-      width: 30px;
-      background: white;
-      border-radius: 50%;
-      border: 2px solid #000;
-      cursor: pointer;
-      box-shadow: 0 0 5px rgba(0,0,0,0.5);
-    }
-
-    .volume-slider::-moz-range-thumb {
       height: 30px;
       width: 30px;
       background: white;
@@ -148,22 +163,18 @@
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
-
-    @media (max-width: 600px) {
-      .typing-text {
-        font-size: 1.8em;
-      }
-      h2 {
-        font-size: 1.2em;
-      }
-      .project-btn {
-        padding: 10px 15px;
-        font-size: 1em;
-      }
-    }
   </style>
 </head>
 <body>
+  <!-- Background Video -->
+  <video class="video-bg" autoplay loop muted>
+    <source src="https://files.catbox.moe/jksekt.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- Visualizer -->
+  <canvas id="visualizer"></canvas>
+
   <img src="https://files.catbox.moe/xa9kzj.jpg" alt="James profile picture" class="profile-img" onclick="speak('James profile image')">
   <h1 class="typing-text" onclick="speak('James Tech Support')"></h1>
   <h2 onclick="speak('JamesTech Portfolio. Edited and credited to Lord James')">JamesTech Portfolio — Edited and credited to Lord James</h2>
@@ -182,7 +193,6 @@
   </button>
 
   <input type="range" min="0" max="1" step="0.01" value="1" class="volume-slider" id="volumeSlider" onchange="setVolume(this.value)">
-
   <button class="control-btn" onclick="togglePlay()">Pause/Resume</button>
 
   <audio id="bg-music" autoplay loop>
@@ -210,7 +220,6 @@
     typeEffect();
 
     const music = document.getElementById("bg-music");
-
     function togglePlay() {
       if (music.paused) {
         music.play();
@@ -223,6 +232,43 @@
       music.volume = parseFloat(value);
       speak(`Volume ${Math.round(value * 100)} percent`);
     }
+
+    // Visualizer
+    const canvas = document.getElementById("visualizer");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = 200;
+
+    const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const source = audioCtx.createMediaElementSource(music);
+    const analyser = audioCtx.createAnalyser();
+    source.connect(analyser);
+    analyser.connect(audioCtx.destination);
+    analyser.fftSize = 256;
+
+    const bufferLength = analyser.frequencyBinCount;
+    const dataArray = new Uint8Array(bufferLength);
+
+    function draw() {
+      requestAnimationFrame(draw);
+      analyser.getByteFrequencyData(dataArray);
+
+      ctx.fillStyle = "rgba(0,0,0,0.2)";
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      const barWidth = canvas.width / bufferLength;
+      let x = 0;
+
+      for (let i = 0; i < bufferLength; i++) {
+        const barHeight = dataArray[i];
+        const hue = i * 4;
+        ctx.fillStyle = `hsl(${hue}, 100%, 50%)`;
+        ctx.fillRect(x, canvas.height - barHeight, barWidth, barHeight);
+        x += barWidth;
+      }
+    }
+
+    draw();
   </script>
 </body>
 </html>
