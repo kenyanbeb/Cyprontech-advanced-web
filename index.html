@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>James Portfolio</title>
   <style>
     body {
@@ -77,15 +77,23 @@
       transform: scale(1.1);
     }
 
-    .whatsapp-btn {
-      margin-top: 30px;
+    .whatsapp-btn, .control-btn {
+      margin-top: 20px;
       padding: 12px 20px;
-      background: #25D366;
-      color: white;
       font-size: 1.1em;
       border: none;
       border-radius: 8px;
       cursor: pointer;
+      color: white;
+    }
+
+    .whatsapp-btn {
+      background: #25D366;
+    }
+
+    .control-btn {
+      background: #444;
+      margin: 5px;
     }
 
     @keyframes rotate {
@@ -121,17 +129,25 @@
   <h2 onclick="speak('JamesTech Portfolio')">JamesTech Portfolio</h2>
 
   <div class="projects">
-    <button class="project-btn" onclick="speak('Project One')">Project One</button>
-    <button class="project-btn" onclick="speak('Project Two')">Project Two</button>
-    <button class="project-btn" onclick="speak('Project Three')">Project Three</button>
-    <button class="project-btn" onclick="speak('Project Four')">Project Four</button>
-    <button class="project-btn" onclick="speak('Project Five')">Project Five</button>
-    <button class="project-btn" onclick="speak('Project Six')">Project Six</button>
+    <button class="project-btn" onclick="window.open('https://example.com/project1', '_blank'); speak('Project One')">Project One</button>
+    <button class="project-btn" onclick="window.open('https://example.com/project2', '_blank'); speak('Project Two')">Project Two</button>
+    <button class="project-btn" onclick="window.open('https://example.com/project3', '_blank'); speak('Project Three')">Project Three</button>
+    <button class="project-btn" onclick="window.open('https://example.com/project4', '_blank'); speak('Project Four')">Project Four</button>
+    <button class="project-btn" onclick="window.open('https://example.com/project5', '_blank'); speak('Project Five')">Project Five</button>
+    <button class="project-btn" onclick="window.open('https://example.com/project6', '_blank'); speak('Project Six')">Project Six</button>
   </div>
 
   <button class="whatsapp-btn" onclick="window.open('https://whatsapp.com/channel/your_channel_id', '_blank'); speak('Join WhatsApp Channel')">
     Join WhatsApp Channel
   </button>
+
+  <button class="control-btn" onclick="toggleMute()">Toggle Volume</button>
+  <button class="control-btn" onclick="togglePlay()">Pause/Resume</button>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="https://files.catbox.moe/r93e2e.mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
 
   <script>
     function speak(text) {
@@ -141,9 +157,24 @@
     }
 
     // Typing effect text
-    const text = "James Tech Support";
+    const text = "James Tech";
     const typingElement = document.querySelector(".typing-text");
     typingElement.textContent = text;
+
+    // Audio Controls
+    const music = document.getElementById("bg-music");
+
+    function toggleMute() {
+      music.muted = !music.muted;
+    }
+
+    function togglePlay() {
+      if (music.paused) {
+        music.play();
+      } else {
+        music.pause();
+      }
+    }
   </script>
 </body>
 </html>
