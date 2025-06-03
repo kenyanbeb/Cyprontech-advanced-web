@@ -10,10 +10,10 @@
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
 <a href="https://github.com/jtechde/jamestech-new-web-for_beginners/fork"><img title="FORK-REPO" src="https://img.shields.io/badge/FORK-REPO-h?color=blue&style=for-the-badge&logo=iphone" width="700" height="50.45"/></a></p>
-
+## EDDIT INDEX.HTML THEN 🤦💚❤️
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-<a href="https://vessel.com"><img title="DEPLOY WEBSITE" src="https://img.shields.io/badge/DEPLOY-FREE-h?color=red&style=for-the-badge&logo=vessel" width="700" height="50.45"/></a></p>
+<a href="https://vercel.com"><img title="DEPLOY WEBSITE" src="https://img.shields.io/badge/DEPLOY-FREE-h?color=red&style=for-the-badge&logo=vessel" width="700" height="50.45"/></a></p>
 
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
