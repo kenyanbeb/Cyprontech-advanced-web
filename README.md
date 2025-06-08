@@ -2,7 +2,7 @@
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&size=30&pause=1000&color=red&center=true&vCenter=true&width=815&height=60&lines=🩸⃟+✚+✚+✚+✚+✚+✚+✚+✚+✚+✚+✜+✜+✚+✚+✚+✚)](https://git.io/typing-svg) 
 <p align="centre"><img src="https://files.catbox.moe/gl24xq.png" width="900" height="400" />
 
-[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&size=30&pause=1000&color=red&center=true&vCenter=true&width=815&height=60&lines=CYPRON-TECH`🩸⃟༑༑+𝗪𝗘𝗕`🩸⃟༑༑+𝗖𝗥𝗘𝗔𝗧𝗘𝗗+𝗕𝗬+`🩸⃟༑༑CYPRONKING)](https://git.io/typing-svg) 
+[![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&size=30&pause=1000&color=red&center=true&vCenter=true&width=815&height=60&lines=RON-TECH`🩸⃟༑༑+𝗪𝗘𝗕`🩸⃟༑༑+𝗖𝗥𝗘𝗔𝗧𝗘𝗗+𝗕𝗬+`☠️🩸⃟༑༑CYPRONKING☠️)](https://git.io/typing-svg) 
 
 
 <a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
