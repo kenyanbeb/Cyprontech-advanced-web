@@ -19,55 +19,6 @@
             </ul>
         </nav>
     </header>
-
-    <main>
-        <section class="latest-news">
-            <h2>Latest News</h2>
-            <article>
-                <h3>Tech Industry Continues to Expand Rapidly</h3>
-                <p>April 23, 2024</p>
-            </article>
-            <article>
-                <h3>Market Watch: Stocks Jump as Trading Begins</h3>
-                <p>April 23, 2024</p>
-            </article>
-            <article>
-                <h3>President Addresses Rising Tensions in Speech</h3>
-                <p>April 23, 2024</p>
-            </article>
-            <article>
-                <h3>New Study Reveals Trends in Remote Work</h3>
-                <p>April 23, 2024</p>
-            </article>
-        </section>
-
-        <section class="featured">
-            <h2>Featured Stories</h2>
-            <article>
-                <h3>The Future of Work: Changes and Challenges Ahead</h3>
-                <p>The workplace is undergoing rapid transformation. Shifts in work practices and expectations pose both opportunities and challenges for employees and employers.</p>
-            </article>
-        </section>
-
-        <aside>
-            <h2>Categories</h2>
-            <ul>
-                <li>Tech</li>
-                <li>Business</li>
-                <li>Politics</li>
-            </ul>
-
-            <h2>Authors</h2>
-            <p>Jane Smith - Senior Writer</p>
-
-            <h2>Contact</h2>
-            <p>Email: contact@newsportal.com</p>
-        </aside>
-    </main>
-
-    <footer>
-        <p>&copy; 2024 News Portal. All rights reserved.</p>
-    </footer>
 </body>
 </html>
 body {
