@@ -1,19 +1,41 @@
-## WELCOME TO CYPRONKING TECH PORTFOLIO
+## 🌟 WELCOME TO CYPRONKING TECH PORTFOLIO 🌟
+
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&size=30&pause=1000&color=red&center=true&vCenter=true&width=815&height=60&lines=🩸⃟+✚+✚+✚+✚+✚+✚+✚+✚+✚+✚+✜+✜+✚+✚+✚+✚)](https://git.io/typing-svg) 
-<p align="centre"><img src="https://files.catbox.moe/gl24xq.png" width="900" height="400" />
+
+<p align="center">
+<img src="https://files.catbox.moe/gl24xq.png" width="900" height="400" />
+</p>
 
 [![Typing SVG](https://readme-typing-svg.herokuapp.com?font=Rockstar-ExtraBold&size=30&pause=1000&color=red&center=true&vCenter=true&width=815&height=60&lines=RON-TECH🩸⃟༑༑+𝗪𝗘𝗕🩸⃟༑༑+𝗖𝗥𝗘𝗔𝗧𝗘𝗗+𝗕𝗬+🩸⃟༑༑CYPRONKING)](https://git.io/typing-svg) 
 
+---
 
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-## steps to create own website
+### 🚀 Steps to Create Your Own Website
+1. **Fork the Repository**  
+   Click below to fork the repo and start customizing your own website!  
+   [![FORK REPO](https://img.shields.io/badge/FORK-REPO-blue?style=for-the-badge&logo=github)](https://github.com/jtechde/jamestech-new-web-for_beginners/fork)
 
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-<a href="https://github.com/jtechde/jamestech-new-web-for_beginners/fork"><img title="FORK-REPO" src="https://img.shields.io/badge/FORK-REPO-h?color=blue&style=for-the-badge&logo=iphone" width="500" height="50.45"/></a></p>
-## EDDIT INDEX.HTML THEN 💝💗💟
+2. **Edit `index.html`**  
+   Modify the HTML file to personalize your portfolio.  
 
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
-<a href="https://vercel.com"><img title="DEPLOY WEBSITE" src="https://img.shields.io/badge/DEPLOY-FREE-h?color=red&style=for-the-badge&logo=vessel" width="700" height="50.45"/></a></p>
+3. **Deploy Your Website**  
+   Click below to deploy your site for free on Vercel!  
+   [![DEPLOY WEBSITE](https://img.shields.io/badge/DEPLOY-FREE-red?style=for-the-badge&logo=vercel)](https://vercel.com)
 
+---
 
-<a><img src='https://i.imgur.com/LyHic3i.gif'/></a>
+### 🎵 Listen to Don Williams
+Click below to enjoy Don Williams' music while browsing!  
+[![Play Music](https://img.shields.io/badge/🎵-Play%20Music-green?style=for-the-badge)](https://youtu.be/lC5-cNm7HFw)
+
+---
+
+### 🌙 Toggle Dark Mode
+Want a different look? Click below to switch themes!  
+[![Dark Mode](https://img.shields.io/badge/🌙-Dark%20Mode-black?style=for-the-badge)](#)
+
+---
+
+### 🔥 Stay Connected
+- **Join My WhatsApp Channel** – [Click Here](#)
+- **Follow Me on GitHub** – [Cypronking](https://github.com/kenyanbeb)
